@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <persistence-unit name="TabonaPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>com.tabona.entity.Customer</class>
+    <class>com.tabona.entity.Rate</class>
+    <class>com.tabona.entity.Tour</class>
+    <class>com.tabona.entity.Vehicle</class>
+    <class>com.tabona.entity.Driver</class>
+    <class>com.tabona.entity.Supplier</class>
+    <class>com.tabona.entity.Expense</class>
+    <class>com.tabona.entity.Customer_Rate</class>
+    <class>com.tabona.entity.Vehicle_Expense</class>
+    <class>com.tabona.entity.Location</class>
+    <class>com.tsms.entity.Customer_Location</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/tsms"/>
+      <property name="javax.persistence.jdbc.password" value="rhynox"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="eclipselink.ddl-generation" value="create-tables"/>
+      <!--
+               <property name="javax.persistence.jdbc.user" value="adminDYIpmuf"/>
+               <property name="javax.persistence.jdbc.password" value="caqe1pPvczn2"/>
+               <property name="javax.persistence.jdbc.url" value="jdbc:mysql://127.6.236.129:3306/tabona"/>
+               <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+               <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
+            -->
+    </properties>
+  </persistence-unit>
+</persistence>
